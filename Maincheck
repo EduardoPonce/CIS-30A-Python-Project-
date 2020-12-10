@@ -45,9 +45,13 @@ while add_room == 'Y':
         print('Invalid Choice')
     
     add_room = input('Add Another Room (Y for yes and N for no): ').upper()
+    
+impoirt random
+reservation-number = random.randint(10000000,99999999)
 
 #display reservation confirmation info.
 print('\nThank you for reserving with Sunset Inn Hotels, below is your reservation information:')
+print("Reservation Number: ",reservation_number)
 print(customer1)
 print(date1)
 A.total(customer_list)
