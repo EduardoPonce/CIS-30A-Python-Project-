@@ -1,0 +1,15 @@
+fout = open('attempt2pp.py','w')
+
+def total(customer_list):
+    
+    subtotal = 0
+    
+    for i in customer_list:
+        subtotal += (i[1])
+        
+    print(customer_list)
+    print('Subtotal: $ {:.2f}'.format(subtotal))
+    
+fout.close()
+
+    
