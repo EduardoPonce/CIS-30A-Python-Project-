@@ -1,0 +1,42 @@
+#Module for validation of customer info
+def check_name():
+    if name.isalpha():
+        print(name)
+    else:
+        print("Enter a valid name: ")
+        
+def check_last(last):
+    if last.isalpha():
+        print(last)
+    else:
+        print("Enter a valid last name: ")
+        
+def limit_age(age):
+   while True:
+       try:
+           if age >= 21:
+                print("Not old enough to rent a room, sorry for the inconvinience.")
+           else: return age
+       except ValueError:
+        print("The age entered is not old enoguh to reserve a hotel room")
+
+def check_phone(phone):
+    if phone.isdigit():
+        print(phone)
+    else:
+        print('Enter a valid phone numeber: ')
+              
+def store_info (name, last, age, phone):
+    file = open('customerinfo.txt', 'w')
+    file.write(name)
+    file.write(last)
+    file.write(age)
+    file.write(phone)
+    file.close()
+    print('Information Stored')
+def r_info(name, last, age, phone):
+    file = open('customerinfo.txt', 'r')
+    print(file.read())
+    file.close()
+
+
